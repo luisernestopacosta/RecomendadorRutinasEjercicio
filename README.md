@@ -2,9 +2,9 @@
 
 Proyecto de IA que consta de la creación de un modelo de Redes Neuronales para recomendar rutinas de ejercicios a personas. Este es el proyecto de clase de la materia INF-556-02 (Simulación de Sistemas).
 
-## Responsables
+## Responsabilidades
 
-- [ ] **Clase del Modelo:** Miguel y Daniel de la Rosa
+- [ ] **Clase del Modelo:** Miguel Tavarez y Daniel de la Rosa
 - [X] **Clase de la Predicción:** Jose Alberto y Luis Perez
 
 ## Instalación
