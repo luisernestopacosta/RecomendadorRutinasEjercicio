@@ -1,12 +1,14 @@
-name: ia-recomendador
+name: simulacion-recomendador
 channels:
   - defaults
 dependencies:
+  - python=3.9
   - matplotlib
   - numpy
   - pandas
   - scikit-learn
   - tensorflow
+  - pip
   - pip:
       - matplotlib
       - scikit-learn

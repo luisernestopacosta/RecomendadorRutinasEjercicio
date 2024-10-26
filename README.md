@@ -28,7 +28,9 @@ git clone https://github.com/GuilleAQN/RecomendadorRutinasEjercicio.git
 cd RecomendadorRutinasEjercicio
 ```
 
-### Paso 2: Crear un entorno virtual
+### Paso 2
+
+### Con entorno virtual
 
 Crea y activa un entorno virtual para aislar las dependencias del proyecto:
 
@@ -42,8 +44,18 @@ python -m venv env
 env\Scripts\activate
 ```
 
-### Paso 3: Instalar dependencias
+Luego, se instalan las dependencias del proyecto:
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Con [Conda](https://docs.anaconda.com/miniconda/)
+
+Crea y activa un entorno virtual con las dependencias:
+
+```bash
+conda env create -f environment.yml
+conda init
+conda activate simulacion-recomendador
 ```
