@@ -5,7 +5,7 @@ Proyecto de IA que consta de la creación de un modelo de Redes Neuronales para 
 ## Responsables
 
 - [ ] **Clase del Modelo:** Miguel y Daniel de la Rosa
-- [ ] **Clase de la Predicción:** Jose Alberto y Luis Alberto
+- [X] **Clase de la Predicción:** Jose Alberto y Luis Perez
 
 ## Instalación
 
