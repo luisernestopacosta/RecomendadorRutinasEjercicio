@@ -1,18 +1,20 @@
-from process_data import load_data
 from sklearn.model_selection import train_test_split
-import tensorflow as tf
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import root_mean_squared_error
 
 
-def training():
-    X,y = load_data()
+def training(X, y, debug=False):
 
-    # if len(X.shape) == 2:
-    #     X = X.reshape((X.shape[0],1,X.shape[1]))
+    X_train, X_test, Y_train, Y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
 
-    X_train, X_test, Y_train, Y_test = train_test_split(X,y,test_size=0.2, random_state=42)
-        
     model = LinearRegression()
     trained_model = model.fit(X_train, Y_train)
+
+    if debug:
+        Y_pred = trained_model.predict(X_test)
+        rmse = root_mean_squared_error(Y_test, Y_pred)
+        print(f"RMSE: {rmse}")
 
     return trained_model
