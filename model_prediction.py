@@ -7,7 +7,7 @@ import pandas as pd
 def predict():
 
     x, y, dict_of_cast = load_data("data/vehiculos2.csv")
-    model = training(x, y)
+    model = training(x, y, debug=False)
 
     result = {}
 
