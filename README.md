@@ -107,7 +107,6 @@ df['exercise'] = label_encoder.transform(df['exercise'])
 
 ### Clasificación de Categorías del Dataset
 
-```
 1. **Tipo Combustible**:
    Eléctrico - 0
    GLP - 1
@@ -157,4 +156,3 @@ df['exercise'] = label_encoder.transform(df['exercise'])
 7. **Estatus de Vehículo**:
    Nuevo - 0
    Usado - 1
-```
