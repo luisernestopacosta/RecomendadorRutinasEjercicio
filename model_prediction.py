@@ -1,6 +1,5 @@
 from model_training import training
 from process_data import load_data
-from sklearn.metrics import root_mean_squared_error
 import questionary
 import pandas as pd
 
