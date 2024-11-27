@@ -5,7 +5,7 @@ Proyecto de IA que consta de la creación de un modelo de Redes Neuronales para 
 ## Responsabilidades
 
 - [ ] **Clase del Modelo:** Miguel y Daniel de la Rosa
-- [x] **Clase de la Predicción:** Jose Alberto y Luis Perez
+- [ ] **Clase de la Predicción:** Jose Alberto y Luis Perez
 
 ## Instalación
 
@@ -104,55 +104,3 @@ df['exercise'] = label_encoder.transform(df['exercise'])
 ```
 
 ## Documentación
-
-### Clasificación de Categorías del Dataset
-
-1. **Tipo Combustible**:
-    - Eléctrico 0
-    - GLP - 1
-    - Gasolina - 2
-    - Híbrido - 3
-
-2. **Marca**:
-    - BMW - 0
-    - Chevrolet - 1
-    - Ford - 2
-    - Honda - 3
-    - Hyundai - 4
-    - Nissan - 5
-    - Toyota - 6
-
-3. **Modelo**:
-    - Altima - 0
-    - Civic - 1
-    - Corolla - 2
-    - Cruze - 3
-    - Elantra - 4
-    - F150 - 5
-    - X5 - 6
-
-4. **Edición**:
-    - Deluxe - 0
-    - Limited - 1
-    - Sport - 2
-    - Standard - 3
-    - Touring - 4
-
-5. **Color**:
-    - Azul - 0
-    - Blanco - 1
-    - Gris - 2
-    - Negro - 3
-    - Rojo - 4
-    - Verde - 5
-
-6. **Tipo de Vehículo**:
-    - Camioneta - 0
-    - Compacto - 1
-    - Coupe - 2
-    - SUV - 3
-    - Sedan - 4
-
-7. **Estatus de Vehículo**:
-    - Nuevo - 0
-    - Usado - 1
