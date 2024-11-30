@@ -1,9 +1,28 @@
 import numpy as np
-from tensorflow.keras.models import load_model
+import tensorflow as tf
+from processing_data import process_data
 
-def predict(model_path, input_data):
-    """Load the trained model and make predictions."""
-    model = load_model(model_path)
-    input_data = np.array(input_data)
-    predictions = model.predict(input_data)
-    return predictions.tolist()
+class PrediccionRutinas:
+    def __init__(self, model_path):
+        self.model = None
+        self.cargar_modelo(model_path)
+
+    def load_custom_model(self, model_path):
+        try:
+            self.modelo = tf.keras.models.load_model(model_path)
+            print("Modelo cargado exitosamente.")
+        except Exception as e:
+            print(f"Error al cargar el modelo: {e}")
+
+    def predict(self, model_path, input_data):
+        """Load the trained model and make predictions."""
+        model = self.load_custom_model(model_path)
+        input_data = process_data(input_data)
+        predictions = model.predict(input_data)
+        return predictions.tolist()
+
+    def interpretar_resultado(self, prediccion):        
+        rutinas = ["Cardio básico", "Entrenamiento de fuerza", "HIIT avanzado", "Yoga y flexibilidad"]
+        indice = np.argmax(prediccion)  
+        return rutinas[indice] if 0 <= indice < len(rutinas) else "Rutina desconocida"
+

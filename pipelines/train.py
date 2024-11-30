@@ -1,10 +1,8 @@
 import os
 from models.model_definition import build_model
-from pipelines.preprocess_data import normalize_data
+from pipelines.processing_data import normalize_data
 
 def train_model(data, labels, save_dir="models/trained"):
-    """Train and save the neural network model."""
-
     os.makedirs(save_dir, exist_ok=True)
     input_shape = (data.shape[1],)
     model = build_model(input_shape)
