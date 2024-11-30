@@ -11,3 +11,4 @@ def train_model(data, labels, save_dir="models/trained"):
     model.save(os.path.join(save_dir, "model.h5"))
     
     return model
+
