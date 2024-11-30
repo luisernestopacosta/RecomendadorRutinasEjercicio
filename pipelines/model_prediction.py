@@ -1,4 +1,3 @@
-import numpy as np
 import tensorflow as tf
 from processing_data import process_data
 
@@ -20,9 +19,3 @@ class PrediccionRutinas:
         input_data = process_data(input_data)
         predictions = model.predict(input_data)
         return predictions.tolist()
-
-    def interpretar_resultado(self, prediccion):        
-        rutinas = ["Cardio básico", "Entrenamiento de fuerza", "HIIT avanzado", "Yoga y flexibilidad"]
-        indice = np.argmax(prediccion)  
-        return rutinas[indice] if 0 <= indice < len(rutinas) else "Rutina desconocida"
-
