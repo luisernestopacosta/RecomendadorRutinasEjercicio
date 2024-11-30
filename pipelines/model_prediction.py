@@ -1,3 +1,4 @@
+import numpy as np
 import tensorflow as tf
 from processing_data import process_data
 
@@ -19,3 +20,8 @@ class PrediccionRutinas:
         input_data = process_data(input_data)
         predictions = model.predict(input_data)
         return predictions.tolist()
+    
+    def interpretar_resultado(self, prediccion):        
+        rutinas = ["Cardio (Correr,Ciclismo,Natacion,Clases de Zumba)", "Entrenamiento de fuerza (Levantamiento de Pesas, Ejercicios con peso corporal, Entrenamientos con bandas elasticas)", "HIIT (Sprint, Circuitos de burpees)", "Flexibilidad y Movilidad (Estiramientos, Yogas, Pilates)", "Rutinas Funcionales (Pesas libres, Uso de herramientas de balones medicinales)", "Rutinas de Deportes (Atletismo, Voleibol, Futbol)", "Entrenamiento en circuito (Flexiones, Saltos, Abdominales)", "Entrenamiento de Resistencia Muscular (Series largas con peso moderado, Actividades como remo o ciclismo a larga distancia)"]
+        indice = np.argmax(prediccion)  
+        return rutinas[indice] if 0 <= indice < len(rutinas) else "Rutina desconocida"
